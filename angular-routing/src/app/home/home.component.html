@@ -1,3 +1,14 @@
-<p>
+
   home works!
-</p>
+   Employee Number: <input type="text" [(ngModel)]="employeeId" value="7202">
+   <button (click)="search()">Search</button>
+   <!-- {"id":"7202","employee_name":"wreererr","employee_salary":"45","employee_age":"677734","profile_image":""} -->
+   <div *ngIf="response">
+      <p>Employee Name: {{response.employee_name}}</p>
+      <p>Employee Salary: {{response.employee_salary}}</p>
+      <p>Employee Age: {{response.employee_age}}</p>
+  </div>
+OR
+<p>Employee Name: {{response ?.employee_name}}</p>
+      <p>Employee Salary: {{response ?.employee_salary}}</p>
+      <p>Employee Age: {{response ?.employee_age}}</p>

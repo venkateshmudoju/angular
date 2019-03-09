@@ -11,6 +11,9 @@ import { SettingsContactComponent } from './settings-contact/settings-contact.co
 import { CodeEvalutionModule } from './code-evalution/code-evalution.module';
 import { JavabrainsModule } from './javabrains/javabrains.module';
 import { TestService } from './test.service';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { TestService } from './test.service';
     SettingsContactComponent    
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     CodeEvalutionModule,
