@@ -13,6 +13,7 @@ import { JavabrainsModule } from './javabrains/javabrains.module';
 import { TestService } from './test.service';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EmployeeService } from './employee.service';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     JavabrainsModule
   ],
   providers: [
-    TestService
+    TestService,
+    EmployeeService
   ],
   bootstrap: [AppComponent]
 })

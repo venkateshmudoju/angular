@@ -10,7 +10,8 @@ export class AppComponent {
     {linkName: 'Home', url: 'home'},
     {linkName: 'Settings', url: 'settings'},
     {linkName: 'Java Brains', url: 'javabrains'},
-    {linkName: 'Code Evalution', url: 'code-evalution'}
+    {linkName: 'Code Evalution', url: 'code-evalution'},
+    {linkName: 'Employees', url: 'app-employees'}
   ]
 
     

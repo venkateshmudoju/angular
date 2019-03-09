@@ -7,10 +7,12 @@ import { SettingsContactComponent } from './settings-contact/settings-contact.co
 import { SettingsProfileComponent } from './settings-profile/settings-profile.component';
 import { ViewComponent } from './javabrains/view/view.component';
 import { BindingComponent } from './code-evalution/binding/binding.component';
+import { EmployeesComponent } from './code-evalution/employees/employees.component';
 
 const routes: Route[] = [
   {path: '', redirectTo:'/home', pathMatch:'full'},
   {path: 'home', component: HomeComponent},
+  {path: 'app-employees', component: EmployeesComponent},
   {
     path: 'settings', 
     component: SettingsComponent,
@@ -22,7 +24,12 @@ const routes: Route[] = [
     ]
   }, 
   {path:'javabrains',component:ViewComponent},
-  {path:'code-evalution', component:BindingComponent},   
+  {path:'code-evalution', component:BindingComponent,
+    children: [
+      {path: '', redirectTo:'employees', pathMatch:'full'},
+        {path: 'employees', component: EmployeesComponent}
+    ]
+  },   
   {path: '**', component: PageNotFoundComponent}
 ];
 
