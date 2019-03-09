@@ -11,9 +11,10 @@ import { SettingsContactComponent } from './settings-contact/settings-contact.co
 import { CodeEvalutionModule } from './code-evalution/code-evalution.module';
 import { JavabrainsModule } from './javabrains/javabrains.module';
 import { TestService } from './test.service';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EmployeeService } from './employee.service';
+import { HttpErrorInterceptor } from './http-error-interceptor';
 
 
 @NgModule({
@@ -35,7 +36,12 @@ import { EmployeeService } from './employee.service';
   ],
   providers: [
     TestService,
-    EmployeeService
+    EmployeeService,,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })

@@ -65,5 +65,12 @@ Mode -> @NgModule
   ng generate class hero model
   -> To create interface
   ng generate i [name]
+
+  -> Error Handling
+  https://scotch.io/bar-talk/error-handling-with-angular-6-tips-and-best-practices192
+
+  -> To create intercetor
+  ng g class my-http-interceptor
+
   
 

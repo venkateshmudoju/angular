@@ -7,12 +7,17 @@ import { EmployeeService } from 'src/app/employee.service';
   styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit {
+  public errorMsg: string;
   public employees = [];
   constructor(private _empService: EmployeeService) { }
 
   ngOnInit() {
     debugger;
     // this.employees = this._empService.getEmployees();
-    this._empService.getEmployees().subscribe(data => this.employees = data);
+    this._empService.getEmployees().subscribe(data => {
+     // debugger;
+      this.employees = data
+    }, error => this.errorMsg = error);
+    
   }
 }
