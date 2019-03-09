@@ -9,6 +9,8 @@ export class AppComponent {
   title = 'angular-routing';
   routes = [
     {linkName: 'Home', url: 'home'},
-    {linkName: 'Settings', url: 'settings'}
+    {linkName: 'Settings', url: 'settings'},
+    {linkName: 'Java Brains', url: 'javabrains'},
+    {linkName: 'Code Evalution', url: 'code-evalution'}
   ]
 }

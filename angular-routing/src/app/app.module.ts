@@ -8,6 +8,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SettingsProfileComponent } from './settings-profile/settings-profile.component';
 import { SettingsContactComponent } from './settings-contact/settings-contact.component';
+import { CodeEvalutionModule } from './code-evalution/code-evalution.module';
+import { JavabrainsModule } from './javabrains/javabrains.module';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { SettingsContactComponent } from './settings-contact/settings-contact.co
     SettingsComponent,
     PageNotFoundComponent,
     SettingsProfileComponent,
-    SettingsContactComponent
+    SettingsContactComponent    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CodeEvalutionModule,
+    JavabrainsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,8 @@ import { SettingsComponent } from './settings/settings.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SettingsContactComponent } from './settings-contact/settings-contact.component';
 import { SettingsProfileComponent } from './settings-profile/settings-profile.component';
+import { ViewComponent } from './javabrains/view/view.component';
+import { BindingComponent } from './code-evalution/binding/binding.component';
 
 const routes: Route[] = [
   {path: '', redirectTo:'/home', pathMatch:'full'},
@@ -18,7 +20,9 @@ const routes: Route[] = [
         {path: 'contact', component: SettingsContactComponent},
         {path: '**', redirectTo:'profile', pathMatch:'full'}
     ]
-  },    
+  }, 
+  {path:'javabrains',component:ViewComponent},
+  {path:'code-evalution', component:BindingComponent},   
   {path: '**', component: PageNotFoundComponent}
 ];
 
