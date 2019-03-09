@@ -1,4 +1,5 @@
 <p>
   settings works!
+  <a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}}</a>
   <router-outlet></router-outlet>
 </p>
