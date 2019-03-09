@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,4 +12,7 @@ export class AppComponent {
     {linkName: 'Java Brains', url: 'javabrains'},
     {linkName: 'Code Evalution', url: 'code-evalution'}
   ]
+
+    
+
 }

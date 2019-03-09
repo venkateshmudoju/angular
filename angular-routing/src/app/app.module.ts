@@ -10,6 +10,7 @@ import { SettingsProfileComponent } from './settings-profile/settings-profile.co
 import { SettingsContactComponent } from './settings-contact/settings-contact.component';
 import { CodeEvalutionModule } from './code-evalution/code-evalution.module';
 import { JavabrainsModule } from './javabrains/javabrains.module';
+import { TestService } from './test.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { JavabrainsModule } from './javabrains/javabrains.module';
     CodeEvalutionModule,
     JavabrainsModule
   ],
-  providers: [],
+  providers: [
+    TestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
