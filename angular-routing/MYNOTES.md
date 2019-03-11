@@ -1,6 +1,30 @@
 Semantic Versioning
 Version 1.2.3(major.minor.fix)
 
+Angular is a Binding Framework.
+View(HTML) <=> Binding Code(Component) <=> Model(JavaScript Object)
+
+->Module is nothing but group of component
+
+->Polyfills helps you run new ES version Javascripts on old browser which does not support them
+
+-> To go into live(Production)
+Web pack Management is a open source framework, it bundles it, compiling and running will be taken care by webpack.
+	ng build will generate below files in dist folder
+	Runtime.js -> This is for webpack runtime
+	Polyfills.js :- Helps to run new ES version JS in old browser
+	Vendor.js -> This the actual project code which you coded(Component, Modules and Model)
+	Main.js -> THis points to the first module of your project
+	Styes.js -> All CSS code goes in this.
+
+-> To create Interceptor
+Create a class and implement interceptor interface and implement required methods
+Interceptor are used pre/post validation kind of stuff, For example token validation b/w browser and serve
+
+-> To create Guard
+Guard are used in route navigation
+For example {path: 'home', component:HomeComponnet, canActive: AuthGuard}
+
 ng new ex --routing --scss
 -> To create a module ng g m modulename
 

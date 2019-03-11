@@ -42,9 +42,9 @@ searchEmployees(term: string): Observable<IEmployee[]> {
   const options = term ?
    { params: new HttpParams().set('name', term) } : {};
 
-  return this.http.get<Hero[]>(this.heroesUrl, options)
+  return this.http.get<IEmployee[]>('URL', options)
     .pipe(
-      catchError(this.handleError<Hero[]>('searchHeroes', []))
+      catchError(this.errorHandler<IEmployee[]>(null))
     );
 }
 
